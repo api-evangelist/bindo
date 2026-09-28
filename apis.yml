@@ -1,23 +1,71 @@
 aid: bindo
+
 name: Bindo
-description: 'Bindo is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Bindo, operating as Bindo Labs, provides a comprehensive cloud‑based point‑of‑sale (POS) platform for hospitality, food‑and‑beverage, and retail businesses. Their solution includes POS terminals, payment processing, inventory management, customer engagement tools, and a suite of integrations for online ordering, gift cards, and analytics. Bindo aims to streamline front‑of‑house and back‑of‑house operations, helping merchants increase sales and improve operational efficiency.'
+
 url: https://raw.githubusercontent.com/api-evangelist/bindo/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-28 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-28'
+
 modified: '2026-09-28'
+
 tags:
 - Company
-apis: []
+- POS
+- Retail
+- Hospitality
+- Payments
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/bindo-hosts.yml
+- type: Vendors
+  url: vendors/bindo-vendors.yml
+- type: TermsOfService
+  url: https://bindolabs.com/terms-and-conditions
+- type: SignUp
+  url: https://bindolabs.com/signup
+- type: PrivacyPolicy
+  url: https://bindolabs.com/privacy-policy
+- type: Blog
+  url: https://bindolabs.com/blog
+- type: DomainSecurity
+  url: security/bindo-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/bindo
+  url: https://bindolabs.com
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-09-28'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://equityzen.com/company/bindo
+    status: 403
+x-enrichment:
+  date: '2026-09-28'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
